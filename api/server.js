@@ -19,7 +19,7 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
+    '/api/': '/'
     '/api/categoryList': '/api/categoryList'
 }))
 server.use(router)
