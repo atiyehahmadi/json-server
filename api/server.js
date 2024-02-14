@@ -21,7 +21,7 @@ server.use(middlewares)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
      '/blog/:resource/:id/show': '/:resource/:id'
-    '/categoryList/:resource': '/:resource/:id'
+    '/categoryList/:resource': '/:resource'
 }))
 server.use(router)
 server.listen(3000, () => {
